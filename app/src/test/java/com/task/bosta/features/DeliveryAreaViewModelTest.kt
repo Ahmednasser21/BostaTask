@@ -143,7 +143,7 @@ class DeliveryAreaViewModelTest : BaseViewModelTest() {
         // Then
         val state = viewModel.deliveryAreaStateFlow.value as DeliveryAreaUIState.OnSuccess
         assertEquals(1, state.cities.size)
-        assertEquals(2, state.cities[0].districts.size) // All districts remain
+        assertEquals(2, state.cities[0].districts.size)
         assertEquals("Alexandria", state.cities[0].cityName)
         assertTrue(state.cities[0].isExpanded)
     }

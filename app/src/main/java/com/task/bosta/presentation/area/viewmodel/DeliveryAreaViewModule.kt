@@ -21,6 +21,9 @@ class DeliveryAreaViewModule @Inject constructor(
     @MainDispatcher private val dispatcher: CoroutineDispatcher
 ) : ViewModel() {
 
+    init {
+        getDeliveryAreas()
+    }
     private val _deliveryAreaStateFlow =
         MutableStateFlow<DeliveryAreaUIState>(DeliveryAreaUIState.Loading)
     val deliveryAreaStateFlow = _deliveryAreaStateFlow.asStateFlow()

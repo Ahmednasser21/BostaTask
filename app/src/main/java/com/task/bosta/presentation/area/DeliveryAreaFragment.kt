@@ -58,8 +58,6 @@ class DeliveryAreaFragment : Fragment() {
         deliveryAreaAdapter.onCityClicked = { cityId ->
             viewModel.toggleCityExpansion(cityId)
         }
-
-        viewModel.getDeliveryAreas()
     }
 
     private fun initRecyclerView() {
